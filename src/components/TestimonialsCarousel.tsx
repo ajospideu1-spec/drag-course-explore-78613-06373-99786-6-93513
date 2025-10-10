@@ -33,18 +33,20 @@ const TestimonialsCarousel = () => {
           estão falando
         </h2>
 
-        {/* Carrossel */}
+        {/* Carrossel Otimizado */}
         <Carousel
           opts={{
             align: "center",
             loop: true,
             dragFree: false,
+            skipSnaps: false,
+            containScroll: "trimSnaps",
           }}
           plugins={[
             Autoplay({
-              delay: 2400,
-              stopOnInteraction: false,
-              stopOnMouseEnter: false,
+              delay: 3000,
+              stopOnInteraction: true,
+              stopOnMouseEnter: true,
             }),
           ]}
           className="w-full mx-auto"
@@ -52,12 +54,14 @@ const TestimonialsCarousel = () => {
           <CarouselContent className="-ml-0">
             {testimonials.map((image, index) => (
               <CarouselItem key={index} className="pl-0 basis-full">
-                <div className="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-xl overflow-hidden bg-transparent shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06]">
+                <div className="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-xl overflow-hidden bg-transparent shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06] will-change-transform">
                   <img
                     src={image}
                     alt={`Depoimento ${index + 1}`}
                     className="w-full h-auto object-cover block rounded-xl select-none"
                     draggable={false}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </CarouselItem>
