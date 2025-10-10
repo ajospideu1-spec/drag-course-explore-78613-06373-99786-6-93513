@@ -47,16 +47,16 @@ const TestimonialsCarousel = () => {
               stopOnMouseEnter: false,
             }),
           ]}
-          className="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto"
+          className="w-full mx-auto"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-0">
             {testimonials.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-full">
-                <div className="w-full aspect-[9/16] rounded-xl overflow-hidden bg-transparent shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06]">
+              <CarouselItem key={index} className="pl-0 basis-full">
+                <div className="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-xl overflow-hidden bg-transparent shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06]">
                   <img
                     src={image}
                     alt={`Depoimento ${index + 1}`}
-                    className="w-full h-full object-contain block rounded-xl select-none"
+                    className="w-full h-auto object-cover block rounded-xl select-none"
                     draggable={false}
                   />
                 </div>
