@@ -9,6 +9,13 @@ import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 
 const Index = () => {
+  const scrollToTopics = () => {
+    const topicsSection = document.getElementById('topics-section');
+    if (topicsSection) {
+      topicsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -46,6 +53,7 @@ const Index = () => {
             <div className="pt-3 sm:pt-4">
               <Button 
                 size="lg"
+                onClick={scrollToTopics}
                 className="group bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-glow transition-all duration-300 hover:scale-105"
               >
                 <Unlock className="w-4 h-4 sm:w-5 sm:h-5 mr-2 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
@@ -57,7 +65,9 @@ const Index = () => {
       </section>
 
       {/* Explore Topics Section */}
-      <ScrollingTopics />
+      <div id="topics-section">
+        <ScrollingTopics />
+      </div>
 
       {/* Bonus Section */}
       <BonusSection />
