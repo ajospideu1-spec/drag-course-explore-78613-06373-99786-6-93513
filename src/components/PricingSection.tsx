@@ -3,20 +3,22 @@ import pricingImage from "@/assets/pricing-card.png";
 
 const PricingSection = () => {
   return (
-    <section className="w-full py-8 md:py-12 px-4 bg-background">
-      <div className="max-w-md mx-auto">
+    <section className="w-full py-6 md:py-10 px-2 md:px-4 bg-background">
+      <div className="max-w-[520px] md:max-w-[560px] mx-auto">
         {/* Container da imagem com botão posicionado */}
         <div className="relative w-full">
-          <img 
-            src={pricingImage} 
-            alt="Rise Community - Preço" 
+          <img
+            src={pricingImage}
+            alt="Rise Community - Preço"
             className="w-full h-auto block"
+            loading="lazy"
+            decoding="async"
           />
-          
-          {/* Botão posicionado no espaço reservado da imagem */}
-          <div className="absolute bottom-[3.5%] left-[11%] right-[11%]">
-            <Button 
-              className="w-full h-[58px] bg-gradient-to-b from-[#FF0000] to-[#CC0000] hover:from-[#FF0000]/90 hover:to-[#CC0000]/90 text-white text-lg md:text-xl font-bold rounded-xl shadow-[0_4px_20px_rgba(255,0,0,0.4)] transition-all duration-300 hover:shadow-[0_6px_30px_rgba(255,0,0,0.6)] hover:scale-[1.02]"
+
+          {/* Botão posicionado exatamente no espaço da arte */}
+          <div className="absolute left-[12.5%] right-[12.5%] bottom-[8.5%] h-[12%]">
+            <Button
+              className="w-full h-full bg-gradient-to-b from-[#ff2a2a] to-[#c90f0f] text-white text-base md:text-lg font-bold rounded-[14px] shadow-[0_6px_28px_rgba(255,0,0,0.45)]"
             >
               Comprar agora
             </Button>
