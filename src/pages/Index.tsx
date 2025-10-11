@@ -4,6 +4,7 @@ import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import MembersCounter from "@/components/MembersCounter";
 import GuaranteeSection from "@/components/GuaranteeSection";
+import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
@@ -80,6 +81,9 @@ const Index = () => {
 
       {/* Guarantee Section */}
       <GuaranteeSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Footer */}
       <Footer />
