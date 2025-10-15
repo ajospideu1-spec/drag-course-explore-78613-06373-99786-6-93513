@@ -10,7 +10,7 @@ const MembersCounter = () => {
         {/* Número Principal */}
         <div className="relative inline-block">
           <h3 className="text-7xl md:text-8xl lg:text-9xl font-bold text-[#FF0000] tracking-tight leading-none">
-            4,651
+            3,965
           </h3>
           {/* Efeito de brilho no número */}
           <div className="absolute inset-0 blur-3xl bg-[#FF0000]/25" />
