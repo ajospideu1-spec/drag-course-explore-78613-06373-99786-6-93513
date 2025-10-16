@@ -83,7 +83,9 @@ const PricingSection = () => {
 
         {/* Botão CTA */}
         <a 
-          href="#comprar"
+          href="https://pay.cakto.com.br/397jozo_577062"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block font-bold px-7 sm:px-9 py-3 sm:py-4 rounded-[10px] text-white no-underline text-[1.05rem] sm:text-[1.18rem] transition-all duration-200 hover:-translate-y-0.5"
           style={{
             background: '#ff2b2b',
