@@ -74,16 +74,16 @@ const PricingSection = () => {
           className="rounded-xl p-5 mb-6"
           style={{ background: '#1a1a1a' }}
         >
-          <p className="text-[#ccc] m-0 text-[0.95rem]">POR APENAS 7X DE</p>
+          <p className="text-[#ccc] m-0 text-[0.95rem]">POR APENAS 9X DE</p>
           <h3 className="text-[2.05rem] sm:text-[2.45rem] font-bold m-2" style={{ color: '#ff2b2b' }}>
-            R$5,07
+            R$5,14
           </h3>
-          <p className="text-[#ccc] m-0 text-[0.95rem]">OU R$29,90 À VISTA</p>
+          <p className="text-[#ccc] m-0 text-[0.95rem]">OU R$37,00 À VISTA</p>
         </div>
 
         {/* Botão CTA */}
         <a
-          href="https://pay.cakto.com.br/37y2qae"
+          href="https://pay.cakto.com.br/pc557ds"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block font-bold px-7 sm:px-9 py-3 sm:py-4 rounded-[10px] text-white no-underline text-[1.05rem] sm:text-[1.18rem] transition-all duration-200 hover:-translate-y-0.5"
