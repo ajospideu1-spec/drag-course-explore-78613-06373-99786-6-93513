@@ -61,17 +61,15 @@ const TestimonialsCarousel = () => {
           <CarouselContent className="-ml-0">
             {testimonials.map((image, index) => (
               <CarouselItem key={index} className="pl-0 basis-full">
-                <div className="relative w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-xl overflow-hidden bg-transparent shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06] will-change-transform min-h-[400px] md:min-h-[500px]">
+                <div className="w-full max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-xl overflow-hidden bg-transparent shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06] will-change-transform min-h-[400px] md:min-h-[500px] flex items-center justify-center">
                   {!loadedImages[index] && (
-                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                      <Skeleton className="w-full h-full rounded-xl" />
-                    </div>
+                    <Skeleton className="w-full h-[400px] md:h-[500px] rounded-xl" />
                   )}
                   <img
                     src={image}
                     alt={`Depoimento de membro satisfeito ${index + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover rounded-xl select-none transition-opacity duration-500 ${
-                      loadedImages[index] ? "opacity-100 z-20" : "opacity-0 z-0"
+                    className={`w-full h-auto object-cover block rounded-xl select-none transition-opacity duration-300 ${
+                      loadedImages[index] ? "opacity-100" : "opacity-0"
                     }`}
                     draggable={false}
                     loading={index === 0 ? "eager" : "lazy"}
@@ -80,7 +78,6 @@ const TestimonialsCarousel = () => {
                     width={800}
                     height={500}
                     onLoad={() => handleImageLoad(index)}
-                    onError={() => handleImageLoad(index)}
                   />
                 </div>
               </CarouselItem>
