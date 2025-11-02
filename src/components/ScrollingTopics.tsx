@@ -457,7 +457,12 @@ const ScrollingTopics = () => {
               placeholder="Buscar temas... (ex: programação, marketing, design)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-11 md:h-14 pl-10 md:pl-12 pr-10 md:pr-12 text-sm md:text-base rounded-xl md:rounded-2xl border-2 border-border md:border-2 md:border-border bg-[hsl(var(--arsenal-card))] text-[hsl(var(--arsenal-text))] placeholder:text-muted-foreground/60 focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all duration-200 shadow-sm md:shadow-md"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.currentTarget.blur();
+                }
+              }}
+              className="w-full h-11 md:h-14 pl-10 md:pl-12 pr-10 md:pr-12 text-base rounded-xl md:rounded-2xl border-2 border-border md:border-2 md:border-border bg-[hsl(var(--arsenal-card))] text-[hsl(var(--arsenal-text))] placeholder:text-muted-foreground/60 focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all duration-200 shadow-sm md:shadow-md"
             />
             {searchQuery && (
               <button
