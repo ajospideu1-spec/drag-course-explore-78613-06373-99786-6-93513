@@ -6,24 +6,17 @@ import {
 } from "@/components/ui/carousel";
 import { Skeleton } from "@/components/ui/skeleton";
 import Autoplay from "embla-carousel-autoplay";
-import depoimento1 from "@/assets/testimonials/depoimento-1.png";
-import depoimento2 from "@/assets/testimonials/depoimento-2.png";
-import depoimento3 from "@/assets/testimonials/depoimento-3.png";
-import depoimento4 from "@/assets/testimonials/depoimento-4.png";
-import depoimento5 from "@/assets/testimonials/depoimento-5.png";
-import depoimento6 from "@/assets/testimonials/depoimento-6.png";
-import depoimento7 from "@/assets/testimonials/depoimento-7.png";
 
 const TestimonialsCarousel = () => {
   const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
   const testimonials = [
-    depoimento1,
-    depoimento2,
-    depoimento3,
-    depoimento4,
-    depoimento5,
-    depoimento6,
-    depoimento7,
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/01-t-Yg2457Xobqh14GnV.png",
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/02-t-AoP4NDQxREi2yzNe.png",
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/03-t-AGBzvqVEoGSqV8M1.png",
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/04-t-ALp2b8LZx3h0r24N.png",
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/06-t-dJoPNlODwwhzln5l.png",
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/08-t-mnl452EOJGF34ebk.png",
+    "https://assets.zyrosite.com/A1az6jRbQRIEyj59/09-t-AMqDp2w39rS1OzWa.png",
   ];
 
   const handleImageLoad = (index: number) => {
