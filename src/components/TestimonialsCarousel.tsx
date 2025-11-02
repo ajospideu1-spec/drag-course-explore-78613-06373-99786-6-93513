@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -18,6 +18,16 @@ const TestimonialsCarousel = () => {
     "https://assets.zyrosite.com/A1az6jRbQRIEyj59/08-t-mnl452EOJGF34ebk.png",
     "https://assets.zyrosite.com/A1az6jRbQRIEyj59/09-t-AMqDp2w39rS1OzWa.png",
   ];
+
+  // Preload progressivo das imagens em ordem de prioridade
+  useEffect(() => {
+    testimonials.forEach((url, index) => {
+      setTimeout(() => {
+        const img = new Image();
+        img.src = url;
+      }, index * 300); // 300ms de delay entre cada imagem
+    });
+  }, []);
 
   const handleImageLoad = (index: number) => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
